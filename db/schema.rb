@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20160223060756) do
   create_table "contact_lists", force: :cascade do |t|
     t.string   "name",           null: false
     t.string   "contact_number", null: false
+    t.string   "t_nine_str",     null: false
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end

@@ -1,4 +1,41 @@
-<p id="notice"><%= notice %></p>
+<%= form_tag(contact_lists_path, method: "get", id: "search-form") do %>
+<!-- text field tag=action,args,identifier,placeholdertext... -->
+<%= text_field_tag :search, params[:search], class: "search-query", placeholder: "namesearch", type: "search", data: {autocomplete: autocomplete_contact_list_t_nine_str_contact_lists_path, update_elements: {}} %>  
+<%= submit_tag "Search" %>
+<%end%>
+<script type="text/javascript" charset="utf-8">
+  $('#search').bind('railsAutocomplete.select', function(event, data){
+    alert(1)
+  $('#search-form').submit()
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <h1>Listing Contact Lists</h1>
 

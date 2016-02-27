@@ -1,10 +1,13 @@
 class ContactListsController < ApplicationController
   before_action :set_contact_list, only: [:show, :edit, :update, :destroy]
-
+  autocomplete :contact_list,:t_nine_str, :extra_data => [:name], :full=>true, display_value: :contact_name_method
   # GET /contact_lists
   # GET /contact_lists.json
   def index
     @contact_lists = ContactList.all
+    if params[:search]
+      @contact_lists = ContactList.t_nine_str_like("%#{params[:search]}%").order('name')
+    end
   end
 
   # GET /contact_lists/1
@@ -69,6 +72,6 @@ class ContactListsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def contact_list_params
-      params.require(:contact_list).permit(:name, :contact_number)
+      params.require(:contact_list).permit(:name, :contact_number, :t_nine_str)
     end
 end

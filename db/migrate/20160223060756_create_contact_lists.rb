@@ -3,6 +3,7 @@ class CreateContactLists < ActiveRecord::Migration
     create_table :contact_lists do |t|
       t.string :name, null: false
       t.string :contact_number, null: false
+      t.string :t_nine_str, null: false
 
       t.timestamps null: false
     end
