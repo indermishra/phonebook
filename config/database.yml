@@ -6,5 +6,5 @@ default: &default
 development:
   <<: *default
   database: phonebook_development
-  username: shailesh
+  username: indrajeet
   password: 
