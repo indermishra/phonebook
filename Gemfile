@@ -5,6 +5,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.5'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'pg'
 gem 'rails4-autocomplete'
 # Use SCSS for stylesheets
