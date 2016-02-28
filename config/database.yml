@@ -8,3 +8,9 @@ development:
   database: phonebook_development
   username: indrajeet
   password: 
+
+production:
+  <<: *default
+  database: phonebook_production
+  username: indrajeet
+  password: 
