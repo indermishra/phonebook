@@ -1,6 +1,6 @@
 class ContactList < ActiveRecord::Base
   before_save :generate_t9_str
-  scope :t_nine_str_like, -> (t_nine_str) { where("t_nine_str like? OR contact_number like?", t_nine_str, t_nine_str)}
+  scope :t_nine_str_like, -> (t_nine_str) { where("name like?", t_nine_str)}
 
   def generate_t9_str
     t_nine_str = []
